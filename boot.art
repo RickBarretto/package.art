@@ -1,12 +1,13 @@
 #! arturo
 
-import ./{template/services/badges.art}!
+import ./{template/prompts}!
+import ./{template/readme}!
 
-owner: input "Enter your GitHub username: "
-repo: input "Enter your GitHub repository name: "
+repository: getRepository!
+package: getPackage repository!
+usage: getShowcase!
 
-repository: to :Repository #[owner: owner name: repo]!
+readmeContent: readme repository package usage
 
-print badge :ci repository
-print badge :license repository
-print badge :language repository
+write "README.md" readmeContent
+delete.directory "./template"
