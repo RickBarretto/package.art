@@ -30,3 +30,9 @@ showcase: $[file :string][
         ]
     ]
 ]
+
+if standalone? ::
+
+    print example "import {unitt}!"
+    print shell "arturo -p install unitt"
+    print showcase "showcase.png"
