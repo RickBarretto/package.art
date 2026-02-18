@@ -35,7 +35,8 @@ getPackage: $[repository :Repository][
 ]
 
 getShowcase: $[][
-    file: input "Enter the file under docs/images for the showcase image:\n>>> "
+    file: input "Enter the file under docs/images for the showcase image: (showcase.png)\n>>> "
+    if empty? file -> "showcase.png"
     prepend 'file "./docs/images/"
 
     file
