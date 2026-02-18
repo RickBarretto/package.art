@@ -9,7 +9,7 @@ define :LicenseBadge [
     ]
 
     image: method [][
-        src: "https://img.shields.io/github/license/{{owner}}/{{repository}}"
+        src: "https://img.shields.io/github/license/{{owner}}/{{repository}}?"
             | replace "{{owner}}" this\owner
             | replace "{{repository}}" this\repository
 
