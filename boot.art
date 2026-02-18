@@ -27,3 +27,4 @@ if standalone? ::
     write infoContent "info.art"
 
     delete.directory "./template"
+    delete "./boot.art"
