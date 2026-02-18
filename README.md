@@ -40,10 +40,10 @@ This templates ships a common structure:
 ## Usage
 
 1. Create a new repository using it as template
-  ![Step 1: Create from Template](./template/docs/create-from-template.png)
+    1. ![Step 1: Create from Template](./template/docs/create-from-template.png)
 2. On Github, create a `LICENSE` file and choose your license using their templates
-  ![Step 2.1: Create file on Github](./template/docs/create-new-file.png)
-  ![Step 2.2: Name it as LICENSE and choose a template](./template/docs/name-license-file.png)
-  ![Step 2.3: Choose your License and submit](./template/docs/review-and-submit-license.png)
+    1. On Github, reate a new file: ![Step 2.1: Create file on Github](./template/docs/create-new-file.png)
+    2. Name this file and `LICENSE` and click in "Choose a License": ![Step 2.2: Name it as LICENSE and choose a template](./template/docs/name-license-file.png)
+    3. Choose your favorite License, review and submit a commit: ![Step 2.3: Choose your License and submit](./template/docs/review-and-submit-license.png)
 3. Run `arturo boot.art` and follow the instructions.
   Don't worry, this script will delete itself and the useless files for your project.
