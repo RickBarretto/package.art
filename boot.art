@@ -1,6 +1,7 @@
 #! arturo
 
 import ./{template/category}!
+import ./{template/infoFile}!
 import ./{template/prompts}!
 import ./{template/readme}!
 
@@ -10,6 +11,11 @@ usage: getShowcase
 category: getPackageKind
 
 readmeContent: readme repository package usage
+infoContent: infoFile #[
+    library?: library? category
+    executable?: executable? category
+]
 
-write readmeContent "README.md"
-delete.directory "./template"
+; write readmeContent "README.md"
+write infoContent "info.art"
+; delete.directory "./template"
