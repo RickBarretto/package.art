@@ -7,6 +7,10 @@ repository: getRepository!
 package: getPackage repository!
 usage: getShowcase!
 
+if not? empty? usage [
+    ensure -> exists? usage
+]
+
 content: readme repository package usage
 
 write content "README.md"
