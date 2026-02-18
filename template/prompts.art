@@ -1,0 +1,26 @@
+import ./{models/meta}!
+
+githubUrl: "https://github.com/"
+isGithub?: $[x :string][ prefix? x githubUrl ]
+
+getRepository: $[][
+    url: input "Enter the repository URL:\n>>> "
+    ensure -> isGithub? url 
+
+    parts: url | replace githubUrl | split "/"
+    owner: first parts
+    repo: last parts
+
+    to :Repository [owner repo]!
+]
+
+getPackage: $[repository :Repository][
+    order: "Enter the package name:"
+    default: ~"Default: |repository\name|"
+    packageName: input join.lines @[order default ">>> "]
+    if packageName? -> packageName: repository\name
+    
+    description: "Enter the package description:\n>>> "
+
+    to :Package [packageName description]!
+]
