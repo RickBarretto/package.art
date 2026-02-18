@@ -5,7 +5,7 @@ import ./{template/readme}!
 
 repository: getRepository!
 package: getPackage repository!
-usage: getShowcase!
+usage: getShowcase
 
 content: readme repository package usage
 
