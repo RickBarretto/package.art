@@ -19,7 +19,7 @@
 </div>
 
 <p align="center">
-
+  {{ badges }}
   <!-- License Badge -->
   <a href="https://github.com/{{owner}}/{{repository}}/blob/main/LICENSE" style="text-decoration: none; display: inline-block;">
     <img src="https://img.shields.io/github/license/{{owner}}/{{repository}}?style=for-the-badge" alt="License"/>
@@ -42,6 +42,7 @@
 
 ## At a Glance
 
+{{ showcase-image }}
 <p align="center">
 <img 
     alt="Real usage example"
