@@ -1,7 +1,7 @@
-import ./{../utils/badges}!
-import ./{../utils/meta}!
-import ./{../utils/sections/heading}!
-import ./{../utils/sections/body}!
+import ./{utils/badges}!
+import ./{utils/meta}!
+import ./{utils/sections/body}!
+import ./{utils/sections/heading}!
 
 export module [
 
