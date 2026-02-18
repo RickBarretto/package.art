@@ -6,12 +6,12 @@
   <img 
     alt="Arturo logo" 
     width="20" 
-    src="./docs/arturo-light-mode.png#gh-light-mode-only"
+    src="./docs/icons/arturo-light-mode.png#gh-light-mode-only"
   />
   <img 
     alt="Arturo logo" 
     width="20" 
-    src="./docs/arturo-dark-mode.png#gh-dark-mode-only" 
+    src="./docs/icons/arturo-dark-mode.png#gh-dark-mode-only" 
   />
   <br>
   <b>~ CODE IS ART ~</b>
