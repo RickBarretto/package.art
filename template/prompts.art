@@ -1,4 +1,4 @@
-import ./{models/meta}!
+import ./{utils/meta}!
 
 githubUrl: "https://github.com/"
 isGithub?: $[x :string][ prefix? x githubUrl ]

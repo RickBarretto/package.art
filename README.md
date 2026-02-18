@@ -43,13 +43,7 @@
 ## At a Glance
 
 {{ showcase-image }}
-<p align="center">
-<img 
-    alt="Real usage example"
-    width="720"
-    src="./docs/{{showcase-image}}"
-/>
-</p>
+
 
 ## Installation
 

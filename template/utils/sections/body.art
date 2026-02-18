@@ -1,0 +1,32 @@
+
+
+mdCode: $[content :string][
+    language: (attr 'language) ?? ""
+    join.lines @[
+        ~"```|language|"
+        content
+        "```"
+    ]
+]
+
+example: $[content :string][
+    mdCode.language: "art" content
+]
+
+shell: $[content :string][
+    mdCode.language: "sh" content
+]
+
+showcase: $[file :string][
+    (empty? file)? [
+        example ""
+    ][
+        join.lines @[
+            {<p align="center">}
+            indent {<img alt="At a Glance" width="720"}
+            indent ~{src="./docs/images/|file|"}
+            indent "/>"
+            {</p>}
+        ]
+    ]
+]

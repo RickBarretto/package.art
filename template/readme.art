@@ -1,0 +1,59 @@
+import ./{../utils/badges}!
+import ./{../utils/meta}!
+import ./{../utils/sections/heading}!
+import ./{../utils/sections/body}!
+
+export module [
+
+    heading: method [repository :Repository package :Package][
+        badges: join.lines @[
+            {<p align="center">}
+            indent badge :language repository
+            indent "&nbsp;"
+            indent badge :license repository
+            indent "&nbsp;"
+            indent badge :ci repository
+            {</p>}
+        ]
+
+        join.with: "\n\n" @[
+            title package\name
+            description package\description
+            badges
+        ]
+    ]
+
+    body: method [package :Package imageFile :string][
+
+        join.with: "\n\n" @[
+            "## At a Glance"
+
+            showcase imageFile
+
+            "## Installation"
+
+            shell ~"arturo -p install |package\name|"
+
+            "or"
+
+            example ~"import {|package\name|}!"
+
+            "## Documentation"
+            ""
+        ]
+    ]
+
+    readme: method.public [repository :Repository package :Package][
+        join.lines @[
+            this\heading repository package
+            this\body package
+        ]
+    ]
+]!
+
+if standalone? ::
+
+    repository: getRepository!
+    package: getPackage repository!
+
+    print readme repository package
