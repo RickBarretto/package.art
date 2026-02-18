@@ -7,7 +7,7 @@ repository: getRepository!
 package: getPackage repository!
 usage: getShowcase!
 
-readmeContent: readme repository package usage
+content: readme repository package usage
 
-write "README.md" readmeContent
+write content "README.md"
 delete.directory "./template"
