@@ -1,11 +1,13 @@
 #! arturo
 
+import ./{template/category}!
 import ./{template/prompts}!
 import ./{template/readme}!
 
 repository: getRepository!
 package: getPackage repository!
 usage: getShowcase
+category: getPackageKind
 
 content: readme repository package usage
 
