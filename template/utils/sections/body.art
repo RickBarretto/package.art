@@ -14,7 +14,7 @@ showcase: $[file :string][
         join.lines @[
             {<p align="center">}
             indent {<img alt="At a Glance" width="720"}
-            indent ~{src="./docs/images/|file|"}
+            indent ~{src="|file|"}
             indent "/>"
             {</p>}
         ]
