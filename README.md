@@ -1,6 +1,6 @@
 # Template for Arturo Packages
 
-This template is intented to be used for the creation of 
+This template is intented to be used for the creation of
 new Arturo Packages.
 
 Use this repository as template and follow the instructions:
