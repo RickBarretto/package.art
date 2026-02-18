@@ -9,7 +9,7 @@ package: getPackage repository!
 usage: getShowcase
 category: getPackageKind
 
-content: readme repository package usage
+readmeContent: readme repository package usage
 
-write content "README.md"
+write readmeContent "README.md"
 delete.directory "./template"
