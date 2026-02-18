@@ -8,16 +8,12 @@ shell: $[content :string][
 ]
 
 showcase: $[file :string][
-    (empty? file)? [
-        example ""
-    ][
-        join.lines @[
-            {<p align="center">}
-            indent {<img alt="At a Glance" width="720"}
-            indent ~{src="|file|"}
-            indent "/>"
-            {</p>}
-        ]
+    join.lines @[
+        {<p align="center">}
+        indent {<img alt="At a Glance" width="720"}
+        indent ~{src="|file|"}
+        indent "/>"
+        {</p>}
     ]
 ]
 
