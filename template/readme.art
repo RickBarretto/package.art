@@ -37,10 +37,17 @@ body: $[package :Package imageFile :string][
     ]
 ]
 
+readme: $[repository :Repository package :Package imageFile :string][
+    join.with: "\n\n" @[
+        heading repository package
+        body package imageFile
+    ]
+]
+
 if standalone? ::
 
     repository: to :Repository #[owner: "RickBarretto" name: "unitt"]!
     package: to :Package #[name: "unitt" description: "A unit testing framework for Arturo"]!
 
-    print heading repository package
-    print body package "showcase.png"
+    print readme repository package "showcase.png"
+    print readme repository package ""
