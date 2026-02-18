@@ -19,7 +19,7 @@ getRepository: $[][
 
 getPackage: $[repository :Repository][
 
-    packageName: repository\name
+    packageName: new repository\name
     if suffix? packageName ".art"
         -> replace 'packageName ".art" ""
 
