@@ -53,6 +53,10 @@ jobs:
                 os: ${{ matrix.os }}
                 arch: ${{ matrix.arch }}
 
+            - name: "Add Arturo packages to PATH"
+              run: |
+                echo "${HOME}/.arturo/packages/bin" >> $GITHUB_PATH
+            
             - name: Test Package
               run: |
 
