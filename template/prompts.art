@@ -18,12 +18,15 @@ getRepository: $[][
 ]
 
 getPackage: $[repository :Repository][
+
+    packageName: repository\name
+    if suffix? packageName ".art"
+        -> replace 'packageName ".art" ""
+
     order: "Enter the package name:"
-    default: ~"Default: |repository\name|"
-    packageName: input join.lines @[order default ">>> "]
-    if packageName? -> packageName: repository\name
-    
-    description: "Enter the package description:\n>>> "
+    default: ~"Default: |packageName|"
+    packageName: (input join.lines @[order default ">>> "]) ?? packageName
+
 
     to :Package [packageName description]!
 ]
