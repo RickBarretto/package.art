@@ -44,6 +44,10 @@ getShowcase: $[][
     file
 ]
 
+getPackageKind: $[][
+    input "Enter the package kind (lib, exe, both*):\n>>> "
+]
+
 if standalone? ::
 
     repository: getRepository!
