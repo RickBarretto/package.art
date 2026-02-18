@@ -27,7 +27,8 @@ getPackage: $[repository :Repository][
     default: ~"(Default: |packageName|)"
     packageName: (input join.words @[order default "\n>>> "]) ?? packageName
 
-    description: (input "Enter the package description:\n>>> ") ?? "A package for Arturo"
+    description: input "Enter the package description:\n>>> "
+    ensure -> not? empty? description
 
     to :Package [packageName description]!
 ]
