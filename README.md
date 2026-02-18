@@ -1,65 +1,11 @@
-<h1 align="center">Package</h1>
+# Template for Arturo Packages
 
-<div align="center">
-  <i>Quick Description</i>
-  <br><br><br>
-  <img 
-    alt="Arturo logo" 
-    width="20" 
-    src="./docs/icons/arturo-light-mode.png#gh-light-mode-only"
-  />
-  <img 
-    alt="Arturo logo" 
-    width="20" 
-    src="./docs/icons/arturo-dark-mode.png#gh-dark-mode-only" 
-  />
-  <br>
-  <b>~ CODE IS ART ~</b>
-  <br><br>
-</div>
+This template is intented to be used for the creation of 
+new Arturo Packages.
 
-<p align="center">
-  {{ badges }}
-  <!-- License Badge -->
-  <a href="https://github.com/{{owner}}/{{repository}}/blob/main/LICENSE" style="text-decoration: none; display: inline-block;">
-    <img src="https://img.shields.io/github/license/{{owner}}/{{repository}}?style=for-the-badge" alt="License"/>
-  </a> 
+Use this repository as template and follow the instructions:
 
-  &nbsp;
-
-  <!-- Language Badge -->
-  <a href="https://github.com/arturo-lang/arturo" style="text-decoration: none; display: inline-block;">
-    <img src="https://img.shields.io/badge/language-Arturo-6A156B.svg?style=for-the-badge" alt="Language"/>
-  </a>
-
-  &nbsp;
-
-  <!-- CI workflow -->
-  <a href="https://github.com/{{owner}}/{{repository}}/actions" style="text-decoration: none; display: inline-block;">
-    <img src="https://img.shields.io/github/actions/workflow/status/{{owner}}/{{repository}}/test.yml?branch=main&style=for-the-badge" alt="Build Status"/>
-  </a>
-</p>
-
-## At a Glance
-
-{{ showcase-image }}
-
-
-## Installation
-
-```sh
-$ arturo -p install {{package-name}}
-```
-
-or
-
-```art
-import {{{package-name}}}!
-```
-
-## Documentation
-
-
----
-
-<!-- Footnotes -->
+1. Create a new repository using it as template
+2. On Github, create a `LICENSE` file and choose your license using their templates
+3. Run `arturo boot.art` and follow the instructions.
+4. Delete `boot.art` and commit `git commit -m "Initial setup"`
