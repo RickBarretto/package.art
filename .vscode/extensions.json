@@ -3,6 +3,5 @@
         "drkameleon.arturo",
         "eamodio.gitlens",
         "github.vscode-github-actions",
-        "davidanson.vscode-markdownlint"
     ]
 }
