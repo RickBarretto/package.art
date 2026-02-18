@@ -1,20 +1,10 @@
 
-
-mdCode: $[content :string][
-    language: (attr 'language) ?? ""
-    join.lines @[
-        ~"```|language|"
-        content
-        "```"
-    ]
-]
-
 example: $[content :string][
-    mdCode.language: "art" content
+    ~"```art\n|content|\n```"
 ]
 
 shell: $[content :string][
-    mdCode.language: "sh" content
+    ~"```sh\n|content|\n```"
 ]
 
 showcase: $[file :string][
