@@ -19,3 +19,11 @@ define :HtmlLink [
     ]
 
 ]
+
+if standalone? ::
+
+    image: to :HtmlImage #[source: "https://example.com/image.png" description: "Example Image"]!
+    link: to :HtmlLink #[url: "https://example.com" content: image]!
+
+    print to :string image
+    print to :string link
