@@ -1,6 +1,6 @@
 #! arturo
 
-import ./{template/badges.art}!
+import ./{template/services/badges.art}!
 
 owner: input "Enter your GitHub username: "
 repo: input "Enter your GitHub repository name: "
