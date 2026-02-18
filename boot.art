@@ -1,0 +1,12 @@
+#! arturo
+
+import ./{template/badges.art}!
+
+owner: input "Enter your GitHub username: "
+repo: input "Enter your GitHub repository name: "
+
+repository: to :Repository #[owner: owner name: repo]!
+
+print badge :ci repository
+print badge :license repository
+print badge :language repository
