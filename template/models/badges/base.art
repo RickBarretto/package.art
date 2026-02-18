@@ -1,24 +1,4 @@
-define :HtmlImage [
-    init: constructor [source :string description :string]
-
-    string: method [][
-        src: ~{src="|this\source|"}
-        alt: ~{alt="|this\description|"}
-        
-        join @["<img " src " " alt "/>"]
-    ]
-]
-
-define :HtmlLink [
-    init: constructor [url :string content :any]
-
-    string: method [][
-        href: ~{href="|this\url|"}
-        content: to :string this\content
-        join @["<a " href ">" content "</a>"]
-    ]
-
-]
+import ./{../models/html.art}!
 
 define :Badge [
     init: constructor [url :string image :HtmlImage]

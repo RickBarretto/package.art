@@ -1,0 +1,28 @@
+define :HtmlImage [
+    init: constructor [source :string description :string]
+
+    string: method [][
+        src: ~{src="|this\source|"}
+        alt: ~{alt="|this\description|"}
+
+        if attr 'light -> append 'src "#gh-light-mode-only"
+        if attr 'dark -> append 'src "#gh-dark-mode-only"
+
+        join @["<img " src " " alt "/>"]
+    ]
+]
+
+define :HtmlIcon is :HtmlImage [
+    
+]
+
+define :HtmlLink [
+    init: constructor [url :string content :any]
+
+    string: method [][
+        href: ~{href="|this\url|"}
+        content: to :string this\content
+        join @["<a " href ">" content "</a>"]
+    ]
+
+]
