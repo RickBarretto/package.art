@@ -23,7 +23,7 @@ if standalone? ::
             "import ./{lib}!\n\nif standalone? ::\n\tinspect double 3" 
             "src/main.art"
 
-    ; write readmeContent "README.md"
-    ; write infoContent "info.art"
+    write readmeContent "README.md"
+    write infoContent "info.art"
 
-    ; delete.directory "./template"
+    delete.directory "./template"
