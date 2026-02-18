@@ -1,0 +1,23 @@
+import ./{../models/meta}!
+import ./{../models/sections/heading}!
+import ./{../badges}!
+
+heading: $[repository :Repository packageDescription :string][
+    readmeTitle: (attr 'package) ?? repository\name
+
+    badges: join.lines @[
+        {<p align="center">}
+        indent badge :language repository
+        indent "&nbsp;"
+        indent badge :license repository
+        indent "&nbsp;"
+        indent badge :ci repository
+        {</p>}
+    ]
+
+    join.with: "\n\n" @[
+        title readmeTitle
+        description packageDescription
+        badges
+    ]
+]
