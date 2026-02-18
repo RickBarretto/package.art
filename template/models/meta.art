@@ -1,0 +1,1 @@
+define :Repository [owner :string name :string]

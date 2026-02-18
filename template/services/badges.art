@@ -1,8 +1,7 @@
+import ./{models/meta}!
 import ./{models/badges/ci}!
 import ./{models/badges/language}!
 import ./{models/badges/license}!
-
-define :Repository [owner :string name :string]
 
 badge: $[what :type repository :Repository][
     owner: repository\owner
