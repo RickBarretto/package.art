@@ -40,10 +40,10 @@ This templates ships a common structure:
 ## Usage
 
 1. Create a new repository using it as template
-  1. <img src="./template/docs/create-from-template.png" alt="Step 1: Create from Template" width="600" style="max-width:100%;height:auto;" />
+    1. <img src="./template/docs/create-from-template.png" alt="Step 1: Create from Template" width="600" style="max-width:100%;height:auto;" />
 2. On Github, create a `LICENSE` file and choose your license using their templates
-  1. On Github, reate a new file: <img src="./template/docs/create-new-file.png" alt="Step 2.1: Create file on Github" width="600" style="max-width:100%;height:auto;" />
-  2. Name this file and `LICENSE` and click in "Choose a License": <img src="./template/docs/name-license-file.png" alt="Step 2.2: Name it as LICENSE and choose a template" width="600" style="max-width:100%;height:auto;" />
-  3. Choose your favorite License, review and submit a commit: <img src="./template/docs/review-and-submit-license.png" alt="Step 2.3: Choose your License and submit" width="600" style="max-width:100%;height:auto;" />
+    1. On Github, reate a new file: <img src="./template/docs/create-new-file.png" alt="Step 2.1: Create file on Github" width="600" style="max-width:100%;height:auto;" />
+    2. Name this file and `LICENSE` and click in "Choose a License": <img src="./template/docs/name-license-file.png" alt="Step 2.2: Name it as LICENSE and choose a template" width="600" style="max-width:100%;height:auto;" />
+    3. Choose your favorite License, review and submit a commit: <img src="./template/docs/review-and-submit-license.png" alt="Step 2.3: Choose your License and submit" width="600" style="max-width:100%;height:auto;" />
 3. Run `arturo boot.art` and follow the instructions.
   Don't worry, this script will delete itself and the useless files for your project.
