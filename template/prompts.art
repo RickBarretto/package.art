@@ -27,6 +27,7 @@ getPackage: $[repository :Repository][
     default: ~"Default: |packageName|"
     packageName: (input join.lines @[order default ">>> "]) ?? packageName
 
+    description: (input "Enter the package description:\n>>> ") ?? "A package for Arturo"
 
     to :Package [packageName description]!
 ]
