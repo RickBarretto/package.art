@@ -31,3 +31,11 @@ getPackage: $[repository :Repository][
 
     to :Package [packageName description]!
 ]
+
+if standalone? ::
+
+    repository: getRepository!
+    package: getPackage repository!
+
+    inspect repository
+    inspect package
