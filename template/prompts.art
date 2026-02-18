@@ -33,10 +33,16 @@ getPackage: $[repository :Repository][
     to :Package [packageName description]!
 ]
 
+getShowcase: $[][
+    input "Enter the file under docs/images for the showcase image (optional):\n>>> "
+]
+
 if standalone? ::
 
     repository: getRepository!
     package: getPackage repository!
+    showcase: getShowcase!
 
     inspect repository
     inspect package
+    inspect showcase
