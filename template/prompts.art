@@ -34,7 +34,10 @@ getPackage: $[repository :Repository][
 ]
 
 getShowcase: $[][
-    input "Enter the file under docs/images for the showcase image (optional):\n>>> "
+    file: input "Enter the file under docs/images for the showcase image (optional):\n>>> "
+    if not? empty? file [
+        ensure -> exists? file
+    ]
 ]
 
 if standalone? ::
